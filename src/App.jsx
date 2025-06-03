@@ -1,3 +1,5 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 import { useState } from 'react'
 import './App.css'
 
