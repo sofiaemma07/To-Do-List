@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import { useState } from 'react'
 import './App.css'
+
 
 function App() {
   const [tasks, setTasks] = useState([])
@@ -41,7 +40,7 @@ function App() {
       <h1>Lista de Tareas</h1>
 
       <form onSubmit={handleAddTask}>
-        <div class="hola">
+        <div className="hola">
           <input
             type="text"
             placeholder="Título de la tarea"
@@ -54,7 +53,7 @@ function App() {
             value={image}
             onChange={(e) => setImage(e.target.value)}
           />
-          <button class="agregar" type="submit">
+          <button className="agregar" type="submit">
             <img
               src="https://www.pngall.com/wp-content/uploads/19/Joyful-Check-Mark-Style-PNG.png"
               alt="Agregar"
@@ -83,10 +82,10 @@ function App() {
               <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
                 {task.title}
               </span>
-              <button class="estadoTarea" onClick={() => toggleTask(task.id)}>
+              <button className="estadoTarea" onClick={() => toggleTask(task.id)}>
                 {task.completed ? 'Desmarcar' : 'Completar'}
               </button>
-              <button class="eliminar" onClick={() => deleteTask(task.id)}>
+              <button className="eliminar" onClick={() => deleteTask(task.id)}>
                 Eliminar
               </button>
             </li>
